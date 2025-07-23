@@ -1,14 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom/client"; // ✅ Use .client
-import App from "./App";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import { Provider } from 'react-redux'
+import store from './redux/store.js'
 
-import { Provider } from "react-redux";
-import store from "./redux/store";
-
-const root = ReactDOM.createRoot(document.getElementById("root")); // ✅ .createRoot is now available
-root.render(
+createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <App />
-  </Provider>
-);
+  </Provider>,
+)

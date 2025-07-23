@@ -8,7 +8,7 @@ const errorMiddleware = require("./Middleware/error")
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: 'http://localhost:5173', // or use '*' in development for all origins
+  origin: 'http://localhost:3000', // or use '*' in development for all origins
   credentials: true // if using cookies or auth headers
 }));
 

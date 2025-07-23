@@ -1,20 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Navbar from './components/Navbar';
-import "./assets/css/styles.css";
-import "./assets/css/responsive.css";
+import { useEffect, useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import { useDispatch } from 'react-redux'
+import { getProducts } from './actions/productAction'
 
 function App() {
+  const [count, setCount] = useState(0)
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProducts())
+  }, [dispatch])
+  
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* Add more routes like /products, /cart, etc. */}
-      </Routes>
-    </Router>
-  );
+    <>
+      App
+    </>
+  )
 }
 
-export default App;
+export default App
