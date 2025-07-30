@@ -9,6 +9,7 @@ import BlogPage from '../pages/BlogPage';
 import CartPage from '../pages/CartPage';
 import Layout from '../layout/Layout';
 import AboutPage from '../pages/AboutPage';
+import ProductDetails from '../components/ProductDetails';
 
 const AppRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const AppRoutes = () => {
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<ProductPage />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/cart" element={<CartPage />} />

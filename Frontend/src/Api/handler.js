@@ -11,4 +11,9 @@ const axiosInstance = axios.create({
   },
 });
 
+export const axiosGet = async (url, config = {}) => {
+  const res = await axiosInstance.get(url, config);
+  return res;
+};
+
 export default axiosInstance;
